@@ -3,7 +3,7 @@ README:
 about the TwitMapWeb   http://twitmapshijiehu-env.elasticbeanstalk.com/
 
 For html file:
-	
+	  
  The first five buttons with text are keywords buttons. When click the keywords button, html will send asynchronous http message with keyword to the server and server will search from database and return the query result to html. When receiving all information, html will show the positions of the twitters on map.
  By sending asynchronous message, the web page do not need to upload every element.
 
@@ -18,11 +18,18 @@ Reference:
 For Servlet Java file:
 There are three java file, message.java normalize the datas read from AWS simpleDB, TwitS.java is the servlet class that interact with http message and database. Test.java is the class that manipulate with database, including get credentials for twitter and AWS simpleDB, stream datas from twitter and write datas to database, read or query datas from database.
 
+
 When receive http message, servlet decode the message by keyword "keyword" and send the keyword to database to query for result.The result is put in an ArrayList and send back to the html for display.
 
 Reference:
 	AWS SDK Guidence
 	AWS SDK Java API Guidence
+
+
+
+
+
+
 
 
 
